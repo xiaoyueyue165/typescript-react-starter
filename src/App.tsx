@@ -5,6 +5,19 @@ import HelloC from "./components/helloc";
 import logo from "./logo.svg";
 
 class App extends React.Component {
+  state = {
+    count: 1
+  };
+  onIncrement = () => {
+    this.setState({
+      count: this.state.count + 1
+    });
+  };
+  onDecrement = () => {
+    this.setState({
+      count: this.state.count - 1
+    });
+  };
   public render() {
     return (
       <div className="App">
@@ -15,7 +28,12 @@ class App extends React.Component {
         <p className="App-intro">
           To get started, edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <Hello name="Rainbow" />
+        <Hello
+          name="Rainbow"
+          onIncrement={this.onIncrement}
+          onDecrement={this.onDecrement}
+          enthusiasmLevel={this.state.count}
+        />
         <HelloC name="HeiZi" enthusiasmLevel={3} />
       </div>
     );
