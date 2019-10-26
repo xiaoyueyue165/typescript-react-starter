@@ -1,5 +1,5 @@
-import * as React from "react";
-import "./style.scss";
+import * as React from 'react';
+import './style.css';
 export interface Props {
   name: string;
   enthusiasmLevel?: number;
@@ -8,7 +8,7 @@ export interface Props {
 }
 function Hello({ name, enthusiasmLevel = 1, onDecrement, onIncrement }: Props) {
   if (enthusiasmLevel <= 0) {
-    throw new Error("You could be a little more enthusiastic. :D");
+    throw new Error('You could be a little more enthusiastic. :D');
   }
   return (
     <div className="hello">
@@ -26,5 +26,5 @@ function Hello({ name, enthusiasmLevel = 1, onDecrement, onIncrement }: Props) {
 export default Hello;
 
 function getExclamationMarks(numChars: number) {
-  return Array(numChars + 1).join("!"); // 自动减 1 的特点
+  return Array(numChars + 1).join('!'); // 自动减 1 的特点
 }

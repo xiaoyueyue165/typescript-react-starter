@@ -1,12 +1,12 @@
-import * as React from "react";
-import "./App.css";
-import Hello from "./components/hello";
-import HelloC from "./components/helloc";
-import logo from "./logo.svg";
+import * as React from 'react';
+import './App.css';
+import Hello from './components/hello';
+import HelloC from './components/helloc';
+import logo from './logo.svg';
 
 class App extends React.Component {
   state = {
-    count: 1
+    count: 2
   };
   onIncrement = () => {
     this.setState({
