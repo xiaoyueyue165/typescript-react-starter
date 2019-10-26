@@ -2,6 +2,8 @@ import * as React from 'react';
 import './App.css';
 import Hello from './components/hello';
 import HelloC from './components/helloc';
+import StatefulHello from './components/StatefulHello';
+import HelloContainer from './containers/HelloContainer';
 import logo from './logo.svg';
 
 class App extends React.Component {
@@ -35,6 +37,8 @@ class App extends React.Component {
           enthusiasmLevel={this.state.count}
         />
         <HelloC name="HeiZi" enthusiasmLevel={3} />
+        <StatefulHello name="ShuiGe" />
+        <HelloContainer />
       </div>
     );
   }
